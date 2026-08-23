@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { requireAdmin } from "../../lib/auth/roles";
-import { logoutAction } from "../../lib/auth/actions";
+import { redirect } from "next/navigation";
+import { requireAdmin, ForbiddenError, UnauthorizedError } from "../../lib/auth/roles";
+import { adminLogoutAction } from "../../lib/auth/admin-actions";
 
 const NAV_GROUPS = [
   {
@@ -45,8 +46,15 @@ const NAV_GROUPS = [
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   // Defense in depth: middleware already blocks non-admins from /admin/*,
-  // but every admin surface re-checks here too.
-  await requireAdmin();
+  // but every admin surface re-checks here too. Server-side only — never
+  // rely on hiding the dashboard on the client.
+  try {
+    await requireAdmin();
+  } catch (err) {
+    if (err instanceof UnauthorizedError) redirect("/admin/login");
+    if (err instanceof ForbiddenError) redirect("/unauthorized?code=403");
+    throw err;
+  }
 
   return (
     <div className="flex min-h-screen bg-slate-50">
@@ -66,7 +74,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             </div>
           ))}
         </nav>
-        <form action={logoutAction} className="mt-8">
+        <form action={adminLogoutAction} className="mt-8">
           <button type="submit" className="w-full rounded-lg px-3 py-2 text-left text-sm font-medium text-red-500 hover:bg-red-50">
             Logout
           </button>
