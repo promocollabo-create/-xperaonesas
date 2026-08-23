@@ -1,5 +1,5 @@
-import { createAdminClient } from "@/lib/supabase/admin";
-import { formatDate } from "@/lib/utils";
+import { createAdminClient } from "../../../lib/supabase/admin";
+import { formatDate } from "../../../lib/utils";
 
 export default async function AdminDownloadsPage() {
   const admin = createAdminClient();

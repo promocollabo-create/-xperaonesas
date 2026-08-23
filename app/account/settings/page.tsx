@@ -1,5 +1,5 @@
-import { forgotPasswordAction } from "@/lib/auth/actions";
-import { createClient } from "@/lib/supabase/server";
+import { forgotPasswordAction } from "../../../lib/auth/actions";
+import { createClient } from "../../../lib/supabase/server";
 
 export default async function SettingsPage() {
   const supabase = createClient();

@@ -1,4 +1,4 @@
-import { saveWhatsNewAction } from "@/lib/admin/whatsNewActions";
+import { saveWhatsNewAction } from "../../../../lib/admin/whatsNewActions";
 
 export default function NewWhatsNewPage() {
   return (

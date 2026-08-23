@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation";
-import { getCart } from "@/lib/orders/cart";
-import { createClient } from "@/lib/supabase/server";
-import { formatMoney } from "@/lib/utils";
-import CheckoutForm from "@/components/CheckoutForm";
+import { getCart } from "../../lib/orders/cart";
+import { createClient } from "../../lib/supabase/server";
+import { formatMoney } from "../../lib/utils";
+import CheckoutForm from "../../components/CheckoutForm";
 
 export const metadata = { title: "Checkout" };
 

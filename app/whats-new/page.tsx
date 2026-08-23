@@ -1,7 +1,7 @@
-import { createClient } from "@/lib/supabase/server";
+import { createClient } from "../../lib/supabase/server";
 import Link from "next/link";
-import { formatDate } from "@/lib/utils";
-import type { WhatsNewItem } from "@/types/database";
+import { formatDate } from "../../lib/utils";
+import type { WhatsNewItem } from "../../types/database";
 
 export const metadata = { title: "What's New" };
 export const revalidate = 60;

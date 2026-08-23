@@ -1,8 +1,8 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { requireAdmin } from "@/lib/auth/roles";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { requireAdmin } from "../auth/roles";
+import { createAdminClient } from "../supabase/admin";
 import { z } from "zod";
 
 const schema = z.object({

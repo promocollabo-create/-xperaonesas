@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { useCart } from "@/components/CartProvider";
-import type { Profile, WebsiteSettings } from "@/types/database";
-import { cn } from "@/lib/utils";
+import { useCart } from "./CartProvider";
+import type { Profile, WebsiteSettings } from "../types/database";
+import { cn } from "../lib/utils";
 
 // Primary navigation is fixed by product requirements. "XperaOne Panel" is
 // intentionally NOT here — it lives one level deep, under Account.

@@ -2,9 +2,9 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { requireAdmin } from "@/lib/auth/roles";
-import { createAdminClient } from "@/lib/supabase/admin";
-import { productSchema } from "@/lib/validation/schemas";
+import { requireAdmin } from "../auth/roles";
+import { createAdminClient } from "../supabase/admin";
+import { productSchema } from "../validation/schemas";
 
 export async function saveProductAction(formData: FormData) {
   await requireAdmin();

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { approvePaymentAction } from "@/lib/payments/actions";
-import { requireAdmin } from "@/lib/auth/roles";
+import { approvePaymentAction } from "../../../../../../lib/payments/actions";
+import { requireAdmin } from "../../../../../../lib/auth/roles";
 
 // Programmatic equivalent of the admin "Approve" button, for any external
 // integration/automation. The UI itself calls approvePaymentAction directly

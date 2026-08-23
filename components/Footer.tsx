@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { WebsiteSettings } from "@/types/database";
+import type { WebsiteSettings } from "../types/database";
 
 export default function Footer({ settings }: { settings: WebsiteSettings | null }) {
   const footer = settings?.footer ?? {};

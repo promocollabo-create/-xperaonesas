@@ -1,5 +1,5 @@
-import { formatDate } from "@/lib/utils";
-import type { OrderStatusHistory } from "@/types/database";
+import { formatDate } from "../lib/utils";
+import type { OrderStatusHistory } from "../types/database";
 
 const STEP_ORDER = ["pending", "payment_verification", "payment_verified", "completed"];
 const STEP_LABEL: Record<string, string> = {

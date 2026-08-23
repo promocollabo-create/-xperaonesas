@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import OrderTimeline from "@/components/OrderTimeline";
-import { formatMoney, formatDate } from "@/lib/utils";
+import OrderTimeline from "./OrderTimeline";
+import { formatMoney, formatDate } from "../lib/utils";
 
 export default function TrackOrderForm() {
   const [orderNumber, setOrderNumber] = useState("");

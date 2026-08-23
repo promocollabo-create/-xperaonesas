@@ -1,4 +1,4 @@
-import TrackOrderForm from "@/components/TrackOrderForm";
+import TrackOrderForm from "../../components/TrackOrderForm";
 
 export const metadata = { title: "Track Order" };
 

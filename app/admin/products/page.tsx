@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { createAdminClient } from "@/lib/supabase/admin";
-import { formatMoney } from "@/lib/utils";
-import { deleteProductAction, togglePublishAction } from "@/lib/admin/productActions";
+import { createAdminClient } from "../../../lib/supabase/admin";
+import { formatMoney } from "../../../lib/utils";
+import { deleteProductAction, togglePublishAction } from "../../../lib/admin/productActions";
 
 export default async function AdminProductsPage({ searchParams }: { searchParams: { q?: string } }) {
   const admin = createAdminClient();

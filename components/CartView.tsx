@@ -2,8 +2,8 @@
 
 import { useEffect, useState, useTransition } from "react";
 import Link from "next/link";
-import { formatMoney } from "@/lib/utils";
-import { useCart } from "@/components/CartProvider";
+import { formatMoney } from "../lib/utils";
+import { useCart } from "./CartProvider";
 
 interface CartLine {
   productId: string;

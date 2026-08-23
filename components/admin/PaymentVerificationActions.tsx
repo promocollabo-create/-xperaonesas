@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { approvePaymentAction, rejectPaymentAction } from "@/lib/payments/actions";
+import { approvePaymentAction, rejectPaymentAction } from "../../lib/payments/actions";
 
 export default function PaymentVerificationActions({ orderNumber }: { orderNumber: string }) {
   const [showReject, setShowReject] = useState(false);

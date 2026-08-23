@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
-import ProductGrid from "@/components/ProductGrid";
-import { sanitizeCustomHtml, sanitizeCustomCss } from "@/lib/sanitize/html";
-import type { PageSection, ProductWithImages, Category } from "@/types/database";
+import { createClient } from "../../lib/supabase/server";
+import ProductGrid from "../ProductGrid";
+import { sanitizeCustomHtml, sanitizeCustomCss } from "../../lib/sanitize/html";
+import type { PageSection, ProductWithImages, Category } from "../../types/database";
 
 /**
  * Renders a page's PUBLISHED sections only. Draft content never reaches

@@ -1,4 +1,4 @@
-import { loginAction } from "@/lib/auth/actions";
+import { loginAction } from "../../lib/auth/actions";
 import Link from "next/link";
 
 export const metadata = { title: "Login" };

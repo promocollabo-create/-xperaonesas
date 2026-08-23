@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { requireAdmin } from "@/lib/auth/roles";
-import { logoutAction } from "@/lib/auth/actions";
+import { requireAdmin } from "../../lib/auth/roles";
+import { logoutAction } from "../../lib/auth/actions";
 
 const NAV_GROUPS = [
   {

@@ -1,4 +1,4 @@
-import AdminOrderDetailPage from "@/app/admin/orders/[orderNumber]/page";
+import AdminOrderDetailPage from "../../orders/[orderNumber]/page";
 
 // Payment Verification review re-uses the full order detail view (items,
 // payment record, proof screenshot, approve/reject actions) so admins

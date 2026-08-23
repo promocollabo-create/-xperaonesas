@@ -1,8 +1,8 @@
-import { createClient } from "@/lib/supabase/server";
+import { createClient } from "../../../../lib/supabase/server";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import OrderTimeline from "@/components/OrderTimeline";
-import { formatMoney } from "@/lib/utils";
+import OrderTimeline from "../../../../components/OrderTimeline";
+import { formatMoney } from "../../../../lib/utils";
 
 export default async function AccountOrderDetailPage({ params }: { params: { orderNumber: string } }) {
   const supabase = createClient();

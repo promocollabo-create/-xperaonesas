@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { rejectPaymentAction } from "@/lib/payments/actions";
-import { requireAdmin } from "@/lib/auth/roles";
+import { rejectPaymentAction } from "../../../../../../lib/payments/actions";
+import { requireAdmin } from "../../../../../../lib/auth/roles";
 
 const schema = z.object({ reason: z.string().min(5) });
 

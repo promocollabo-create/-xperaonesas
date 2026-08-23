@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { useCart } from "@/components/CartProvider";
+import { useCart } from "./CartProvider";
 
 export default function ProductActions({ productId }: { productId: string }) {
   const [quantity, setQuantity] = useState(1);

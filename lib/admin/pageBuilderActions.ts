@@ -1,10 +1,10 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { requireAdmin } from "@/lib/auth/roles";
-import { createAdminClient } from "@/lib/supabase/admin";
-import { sanitizeCustomHtml, sanitizeCustomCss } from "@/lib/sanitize/html";
-import type { PageSectionType } from "@/types/database";
+import { requireAdmin } from "../auth/roles";
+import { createAdminClient } from "../supabase/admin";
+import { sanitizeCustomHtml, sanitizeCustomCss } from "../sanitize/html";
+import type { PageSectionType } from "../../types/database";
 
 async function getOrCreatePage(slug: string, title: string) {
   const admin = createAdminClient();

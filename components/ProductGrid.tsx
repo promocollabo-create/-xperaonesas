@@ -1,5 +1,5 @@
-import ProductCard from "@/components/ProductCard";
-import type { ProductWithImages } from "@/types/database";
+import ProductCard from "./ProductCard";
+import type { ProductWithImages } from "../types/database";
 
 export default function ProductGrid({
   products,

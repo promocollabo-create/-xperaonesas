@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient } from "../../../lib/supabase/admin";
 
 export default async function AdminCustomersPage({ searchParams }: { searchParams: { q?: string } }) {
   const admin = createAdminClient();

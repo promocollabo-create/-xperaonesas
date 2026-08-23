@@ -1,8 +1,8 @@
-import { createClient } from "@/lib/supabase/server";
+import { createClient } from "../../../lib/supabase/server";
 import { notFound } from "next/navigation";
-import { formatMoney, effectivePrice } from "@/lib/utils";
-import ProductActions from "@/components/ProductActions";
-import type { ProductWithImages } from "@/types/database";
+import { formatMoney, effectivePrice } from "../../../lib/utils";
+import ProductActions from "../../../components/ProductActions";
+import type { ProductWithImages } from "../../../types/database";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const supabase = createClient();

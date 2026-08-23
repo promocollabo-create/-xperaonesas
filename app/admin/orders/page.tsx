@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { createAdminClient } from "@/lib/supabase/admin";
-import { formatMoney, formatDate } from "@/lib/utils";
+import { createAdminClient } from "../../../lib/supabase/admin";
+import { formatMoney, formatDate } from "../../../lib/utils";
 
 const STATUS_FILTERS = ["all", "pending", "payment_verification", "payment_verified", "completed", "rejected", "cancelled"];
 

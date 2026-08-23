@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { addCartItem, getCart, getCartItemCount, removeCartItem, updateCartItemQuantity } from "@/lib/orders/cart";
-import { effectivePrice } from "@/lib/utils";
+import { addCartItem, getCart, getCartItemCount, removeCartItem, updateCartItemQuantity } from "../../../lib/orders/cart";
+import { effectivePrice } from "../../../lib/utils";
 
 export async function GET() {
   const { items, subtotal, total } = await getCart();

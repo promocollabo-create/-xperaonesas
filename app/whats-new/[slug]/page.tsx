@@ -1,6 +1,6 @@
-import { createClient } from "@/lib/supabase/server";
+import { createClient } from "../../../lib/supabase/server";
 import { notFound } from "next/navigation";
-import { formatDate } from "@/lib/utils";
+import { formatDate } from "../../../lib/utils";
 
 export default async function WhatsNewDetailPage({ params }: { params: { slug: string } }) {
   const supabase = createClient();

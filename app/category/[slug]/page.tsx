@@ -1,7 +1,7 @@
-import { createClient } from "@/lib/supabase/server";
-import ProductGrid from "@/components/ProductGrid";
+import { createClient } from "../../../lib/supabase/server";
+import ProductGrid from "../../../components/ProductGrid";
 import { notFound } from "next/navigation";
-import type { ProductWithImages } from "@/types/database";
+import type { ProductWithImages } from "../../../types/database";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const supabase = createClient();

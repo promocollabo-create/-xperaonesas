@@ -1,4 +1,4 @@
-import CartView from "@/components/CartView";
+import CartView from "../../components/CartView";
 
 export const metadata = { title: "Cart" };
 

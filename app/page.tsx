@@ -1,8 +1,8 @@
-import { createClient } from "@/lib/supabase/server";
-import PageRenderer from "@/components/PageBuilder/Renderer";
-import ProductGrid from "@/components/ProductGrid";
+import { createClient } from "../lib/supabase/server";
+import PageRenderer from "../components/PageBuilder/Renderer";
+import ProductGrid from "../components/ProductGrid";
 import Link from "next/link";
-import type { PageSection, ProductWithImages } from "@/types/database";
+import type { PageSection, ProductWithImages } from "../types/database";
 
 export const revalidate = 60;
 
