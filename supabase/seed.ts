@@ -22,22 +22,28 @@ const admin = createClient(url, serviceKey);
 async function main() {
   console.log("Seeding XperaOne...");
 
-  // 1. Admin user
-  const adminEmail = process.env.SEED_ADMIN_EMAIL ?? "admin@xperaone.example";
-  const adminPassword = process.env.SEED_ADMIN_PASSWORD ?? "ChangeMe123!";
+  // 1. Admin user — only created here if you explicitly opt in via env vars.
+  // For normal setup, prefer `npm run create-admin` (see scripts/create-admin.ts),
+  // which never falls back to a hardcoded password.
+  if (process.env.SEED_ADMIN_EMAIL && process.env.SEED_ADMIN_PASSWORD) {
+    const adminEmail = process.env.SEED_ADMIN_EMAIL;
+    const adminPassword = process.env.SEED_ADMIN_PASSWORD;
 
-  const { data: created, error: userError } = await admin.auth.admin.createUser({
-    email: adminEmail,
-    password: adminPassword,
-    email_confirm: true,
-    user_metadata: { full_name: "XperaOne Admin" }
-  });
+    const { data: created, error: userError } = await admin.auth.admin.createUser({
+      email: adminEmail,
+      password: adminPassword,
+      email_confirm: true,
+      user_metadata: { full_name: "XperaOne Admin" }
+    });
 
-  if (userError && !userError.message.includes("already been registered")) {
-    console.error("Could not create admin user:", userError.message);
-  } else if (created?.user) {
-    await admin.from("profiles").update({ role: "admin", full_name: "XperaOne Admin" }).eq("id", created.user.id);
-    console.log(`Admin user ready: ${adminEmail} / ${adminPassword} (change this password after first login)`);
+    if (userError && !userError.message.includes("already been registered")) {
+      console.error("Could not create admin user:", userError.message);
+    } else if (created?.user) {
+      await admin.from("profiles").update({ role: "admin", full_name: "XperaOne Admin" }).eq("id", created.user.id);
+      console.log(`Admin user ready: ${adminEmail} (change this password after first login)`);
+    }
+  } else {
+    console.log("Skipping admin creation (no SEED_ADMIN_EMAIL/SEED_ADMIN_PASSWORD set). Run `npm run create-admin` instead.");
   }
 
   // 2. Categories

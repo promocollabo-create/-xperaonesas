@@ -37,12 +37,20 @@ export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   const isAccountRoute = pathname.startsWith("/account");
-  const isAdminRoute = pathname.startsWith("/admin");
+  const isAdminLoginRoute = pathname === "/admin/login";
+  const isAdminRoute = pathname.startsWith("/admin") && !isAdminLoginRoute;
 
-  if ((isAccountRoute || isAdminRoute) && !user) {
+  if (isAccountRoute && !user) {
     const redirectUrl = new URL("/login", request.url);
     redirectUrl.searchParams.set("redirectTo", pathname);
     return NextResponse.redirect(redirectUrl);
+  }
+
+  // Admin routes have their own login page and their own "not authenticated"
+  // destination — a customer session (or no session) must never be bounced
+  // to the public /login form here.
+  if (isAdminRoute && !user) {
+    return NextResponse.redirect(new URL("/admin/login", request.url));
   }
 
   if (isAdminRoute && user) {
@@ -52,8 +60,20 @@ export async function middleware(request: NextRequest) {
       .eq("id", user.id)
       .single();
 
+    // Authenticated but not an admin (or disabled): explicit 403, never a
+    // silent fallback to /admin/login — the URL cannot be walked into by
+    // simply logging in as a customer.
     if (!profile || profile.role !== "admin" || profile.is_disabled) {
       return NextResponse.redirect(new URL("/unauthorized?code=403", request.url));
+    }
+  }
+
+  // Already-authenticated admins hitting /admin/login should land on the
+  // dashboard instead of seeing the login form again.
+  if (isAdminLoginRoute && user) {
+    const { data: profile } = await supabase.from("profiles").select("role, is_disabled").eq("id", user.id).single();
+    if (profile && profile.role === "admin" && !profile.is_disabled) {
+      return NextResponse.redirect(new URL("/admin", request.url));
     }
   }
 
