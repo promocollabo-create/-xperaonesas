@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { submitPaymentProofAction } from "../lib/payments/actions";
+import { submitPaymentProofAction } from "@/lib/payments/actions";
 
 export default function PaymentProofForm({ orderNumber }: { orderNumber: string }) {
   const [error, setError] = useState<string | null>(null);

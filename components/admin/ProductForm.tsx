@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { saveProductAction, deleteProductImageAction } from "../../lib/admin/productActions";
+import { saveProductAction, deleteProductImageAction } from "@/lib/admin/productActions";
 import type { Category, ProductWithImages } from "../../types/database";
 
 export default function ProductForm({

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { getSignedDownloadUrl } from "../lib/downloads/actions";
+import { getSignedDownloadUrl } from "@/lib/downloads/actions";
 
 export default function DownloadButton({ orderItemId }: { orderItemId: string }) {
   const [error, setError] = useState<string | null>(null);

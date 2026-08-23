@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { createOrderAction } from "../lib/orders/actions";
+import { createOrderAction } from "@/lib/orders/actions";
 
 export default function CheckoutForm({ defaultName, defaultEmail }: { defaultName: string; defaultEmail: string }) {
   const [error, setError] = useState<string | null>(null);

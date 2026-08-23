@@ -1,4 +1,4 @@
-import { formatDate } from "../lib/utils";
+import { formatDate } from "@/lib/utils";
 import type { OrderStatusHistory } from "../types/database";
 
 const STEP_ORDER = ["pending", "payment_verification", "payment_verified", "completed"];

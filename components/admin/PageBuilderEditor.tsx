@@ -8,7 +8,7 @@ import {
   deleteSectionAction,
   toggleSectionEnabledAction,
   updateSectionAction
-} from "../../lib/admin/pageBuilderActions";
+} from "@/lib/admin/pageBuilderActions";
 import type { PageSection, PageSectionType } from "../../types/database";
 
 const SECTION_TYPES: { type: PageSectionType; label: string }[] = [

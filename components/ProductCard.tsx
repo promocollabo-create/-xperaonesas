@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { formatMoney, effectivePrice } from "../lib/utils";
+import { formatMoney, effectivePrice } from "@/lib/utils";
 import { useCart } from "./CartProvider";
 import type { ProductWithImages } from "../types/database";
 

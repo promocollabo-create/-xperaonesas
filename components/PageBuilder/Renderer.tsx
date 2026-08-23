@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { createClient } from "../../lib/supabase/server";
+import { createClient } from "@/lib/supabase/server";
 import ProductGrid from "../ProductGrid";
-import { sanitizeCustomHtml, sanitizeCustomCss } from "../../lib/sanitize/html";
+import { sanitizeCustomHtml, sanitizeCustomCss } from "@/lib/sanitize/html";
 import type { PageSection, ProductWithImages, Category } from "../../types/database";
 
 /**
