@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { requireAdmin, ForbiddenError, UnauthorizedError } from "../../../lib/auth/roles";
-import { adminLogoutAction } from "../../../lib/auth/admin-actions";
+import { requireAdmin, ForbiddenError, UnauthorizedError } from "@/lib/auth/roles";
+import { adminLogoutAction } from "@/lib/auth/admin-actions";
 
 const NAV_GROUPS = [
   {

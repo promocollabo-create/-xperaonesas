@@ -1,5 +1,5 @@
-import { createAdminClient } from "../../../../lib/supabase/admin";
-import ProductForm from "../../../../components/admin/ProductForm";
+import { createAdminClient } from "@/lib/supabase/admin";
+import ProductForm from "@/components/admin/ProductForm";
 
 export default async function NewProductPage() {
   const admin = createAdminClient();

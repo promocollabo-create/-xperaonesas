@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { createAdminClient } from "../../../lib/supabase/admin";
-import { formatMoney, formatDate } from "../../../lib/utils";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { formatMoney, formatDate } from "@/lib/utils";
 
 export default async function AdminPaymentVerificationPage() {
   const admin = createAdminClient();

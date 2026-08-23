@@ -1,5 +1,5 @@
-import { createClient } from "../../lib/supabase/server";
-import ProductGrid from "../../components/ProductGrid";
+import { createClient } from "@/lib/supabase/server";
+import ProductGrid from "@/components/ProductGrid";
 import Link from "next/link";
 import type { Category, ProductWithImages } from "../../types/database";
 

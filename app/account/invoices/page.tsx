@@ -1,5 +1,5 @@
-import { createClient } from "../../../lib/supabase/server";
-import { formatMoney, formatDate } from "../../../lib/utils";
+import { createClient } from "@/lib/supabase/server";
+import { formatMoney, formatDate } from "@/lib/utils";
 
 export default async function InvoicesPage() {
   const supabase = createClient();

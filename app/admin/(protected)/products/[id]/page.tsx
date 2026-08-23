@@ -1,6 +1,6 @@
-import { createAdminClient } from "../../../../lib/supabase/admin";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { notFound } from "next/navigation";
-import ProductForm from "../../../../components/admin/ProductForm";
+import ProductForm from "@/components/admin/ProductForm";
 
 export default async function EditProductPage({ params }: { params: { id: string } }) {
   const admin = createAdminClient();

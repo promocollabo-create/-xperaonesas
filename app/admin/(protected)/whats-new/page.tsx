@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { createAdminClient } from "../../../lib/supabase/admin";
-import { deleteWhatsNewAction } from "../../../lib/admin/whatsNewActions";
-import { formatDate } from "../../../lib/utils";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { deleteWhatsNewAction } from "@/lib/admin/whatsNewActions";
+import { formatDate } from "@/lib/utils";
 
 export default async function AdminWhatsNewPage() {
   const admin = createAdminClient();

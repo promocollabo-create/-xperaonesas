@@ -1,6 +1,6 @@
-import { createClient } from "../../../lib/supabase/server";
+import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
-import { formatMoney, formatDate } from "../../../lib/utils";
+import { formatMoney, formatDate } from "@/lib/utils";
 
 export default async function MyOrdersPage() {
   const supabase = createClient();

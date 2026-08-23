@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { createClient } from "../lib/supabase/server";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import AnnouncementBar from "../components/AnnouncementBar";
-import { CartProvider } from "../components/CartProvider";
+import { createClient } from "@/lib/supabase/server";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import AnnouncementBar from "@/components/AnnouncementBar";
+import { CartProvider } from "@/components/CartProvider";
 
 export const metadata: Metadata = {
   title: {

@@ -1,9 +1,9 @@
-import { createAdminClient } from "../../../../lib/supabase/admin";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { formatMoney, formatDate } from "../../../../lib/utils";
-import OrderTimeline from "../../../../components/OrderTimeline";
-import PaymentVerificationActions from "../../../../components/admin/PaymentVerificationActions";
+import { formatMoney, formatDate } from "@/lib/utils";
+import OrderTimeline from "@/components/OrderTimeline";
+import PaymentVerificationActions from "@/components/admin/PaymentVerificationActions";
 
 export default async function AdminOrderDetailPage({ params }: { params: { orderNumber: string } }) {
   const admin = createAdminClient();

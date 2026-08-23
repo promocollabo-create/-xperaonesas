@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { logoutAction } from "../../lib/auth/actions";
+import { logoutAction } from "@/lib/auth/actions";
 
 const NAV = [
   { label: "Overview", href: "/account" },

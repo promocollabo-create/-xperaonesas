@@ -1,5 +1,5 @@
-import { createClient } from "../../../lib/supabase/server";
-import { updateProfileAction } from "../../../lib/auth/profileActions";
+import { createClient } from "@/lib/supabase/server";
+import { updateProfileAction } from "@/lib/auth/profileActions";
 
 export default async function ProfilePage() {
   const supabase = createClient();

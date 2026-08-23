@@ -1,5 +1,5 @@
-import { createAdminClient } from "../../../lib/supabase/admin";
-import { updateEmailSettingsAction } from "../../../lib/admin/settingsActions";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { updateEmailSettingsAction } from "@/lib/admin/settingsActions";
 
 export default async function AdminEmailSettingsPage() {
   const admin = createAdminClient();

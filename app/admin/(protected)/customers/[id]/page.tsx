@@ -1,8 +1,8 @@
-import { createAdminClient } from "../../../../lib/supabase/admin";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { formatMoney, formatDate } from "../../../../lib/utils";
-import { toggleCustomerDisabledAction } from "../../../../lib/admin/customerActions";
+import { formatMoney, formatDate } from "@/lib/utils";
+import { toggleCustomerDisabledAction } from "@/lib/admin/customerActions";
 
 export default async function AdminCustomerDetailPage({ params }: { params: { id: string } }) {
   const admin = createAdminClient();

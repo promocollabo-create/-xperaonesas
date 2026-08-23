@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSignedDownloadUrl } from "../../../../lib/downloads/actions";
+import { getSignedDownloadUrl } from "@/lib/downloads/actions";
 
 // Programmatic download-link endpoint (e.g. for a non-browser client).
 // The account/downloads UI calls getSignedDownloadUrl directly as a

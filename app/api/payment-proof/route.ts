@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { submitPaymentProofAction } from "../../../lib/payments/actions";
+import { submitPaymentProofAction } from "@/lib/payments/actions";
 
 // Programmatic equivalent of the payment-proof upload form. The UI uses
 // submitPaymentProofAction directly as a Server Action for progressive

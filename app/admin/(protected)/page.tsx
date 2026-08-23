@@ -1,5 +1,5 @@
-import { createAdminClient } from "../../lib/supabase/admin";
-import { formatMoney } from "../../lib/utils";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { formatMoney } from "@/lib/utils";
 import Link from "next/link";
 
 export default async function AdminDashboardPage() {

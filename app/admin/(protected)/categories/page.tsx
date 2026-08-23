@@ -1,5 +1,5 @@
-import { createAdminClient } from "../../../lib/supabase/admin";
-import { saveCategoryAction, deleteCategoryAction } from "../../../lib/admin/categoryActions";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { saveCategoryAction, deleteCategoryAction } from "@/lib/admin/categoryActions";
 
 export default async function AdminCategoriesPage() {
   const admin = createAdminClient();

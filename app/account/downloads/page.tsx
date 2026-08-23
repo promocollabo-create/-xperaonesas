@@ -1,5 +1,5 @@
-import { createClient } from "../../../lib/supabase/server";
-import DownloadButton from "../../../components/DownloadButton";
+import { createClient } from "@/lib/supabase/server";
+import DownloadButton from "@/components/DownloadButton";
 
 export default async function DownloadsPage() {
   const supabase = createClient();

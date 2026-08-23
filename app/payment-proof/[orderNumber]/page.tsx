@@ -1,6 +1,6 @@
-import { createClient } from "../../../lib/supabase/server";
+import { createClient } from "@/lib/supabase/server";
 import { notFound, redirect } from "next/navigation";
-import PaymentProofForm from "../../../components/PaymentProofForm";
+import PaymentProofForm from "@/components/PaymentProofForm";
 
 export const metadata = { title: "Upload Payment Proof" };
 

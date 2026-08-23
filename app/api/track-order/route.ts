@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { createAdminClient } from "../../../lib/supabase/admin";
-import { trackOrderSchema } from "../../../lib/validation/schemas";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { trackOrderSchema } from "@/lib/validation/schemas";
 
 /**
  * Public endpoint by design (no login required to track an order), so it

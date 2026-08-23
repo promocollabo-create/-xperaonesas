@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createOrderAction } from "../../../lib/orders/actions";
+import { createOrderAction } from "@/lib/orders/actions";
 
 // Programmatic equivalent of the checkout form submission.
 export async function POST(request: Request) {

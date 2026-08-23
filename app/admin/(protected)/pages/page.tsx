@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { createAdminClient } from "../../../lib/supabase/admin";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 const KNOWN_PAGES = [{ slug: "home", title: "Home" }];
 

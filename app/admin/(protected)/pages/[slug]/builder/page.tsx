@@ -1,6 +1,6 @@
-import { createAdminClient } from "../../../../../lib/supabase/admin";
-import { ensureDraftSections, publishPageAction } from "../../../../../lib/admin/pageBuilderActions";
-import SectionEditor from "../../../../../components/admin/PageBuilderEditor";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { ensureDraftSections, publishPageAction } from "@/lib/admin/pageBuilderActions";
+import SectionEditor from "@/components/admin/PageBuilderEditor";
 
 const PAGE_TITLES: Record<string, string> = { home: "Home" };
 

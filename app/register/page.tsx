@@ -1,4 +1,4 @@
-import { registerAction } from "../../lib/auth/actions";
+import { registerAction } from "@/lib/auth/actions";
 import Link from "next/link";
 
 export const metadata = { title: "Create Account" };
